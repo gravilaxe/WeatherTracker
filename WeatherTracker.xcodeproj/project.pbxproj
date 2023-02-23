@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE4DA637299E8A7100B395AB /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4DA636299E8A7100B395AB /* ForecastView.swift */; };
+		AE4DA639299E904A00B395AB /* SmallWeatherBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4DA638299E904A00B395AB /* SmallWeatherBox.swift */; };
 		AEA0EB49299D4C8500496B90 /* WeatherTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0EB48299D4C8500496B90 /* WeatherTrackerApp.swift */; };
-		AEA0EB4B299D4C8500496B90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0EB4A299D4C8500496B90 /* ContentView.swift */; };
+		AEA0EB4B299D4C8500496B90 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0EB4A299D4C8500496B90 /* HomeView.swift */; };
 		AEA0EB4D299D4C8700496B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA0EB4C299D4C8700496B90 /* Assets.xcassets */; };
 		AEA0EB50299D4C8700496B90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA0EB4F299D4C8700496B90 /* Preview Assets.xcassets */; };
+		AEA0EB5B299D4E0900496B90 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0EB5A299D4E0900496B90 /* WeatherView.swift */; };
+		AEA0EB5E299D58AF00496B90 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA0EB5D299D58AF00496B90 /* data.json */; };
+		AEB214C529A7BED300176FCC /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB214C429A7BED300176FCC /* WeatherModel.swift */; };
+		AEB214C729A7BEEE00176FCC /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB214C629A7BEEE00176FCC /* WeatherAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE4DA636299E8A7100B395AB /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		AE4DA638299E904A00B395AB /* SmallWeatherBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWeatherBox.swift; sourceTree = "<group>"; };
 		AEA0EB45299D4C8500496B90 /* WeatherTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA0EB48299D4C8500496B90 /* WeatherTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTrackerApp.swift; sourceTree = "<group>"; };
-		AEA0EB4A299D4C8500496B90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AEA0EB4A299D4C8500496B90 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AEA0EB4C299D4C8700496B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEA0EB4F299D4C8700496B90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AEA0EB5A299D4E0900496B90 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		AEA0EB5D299D58AF00496B90 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		AEB214C429A7BED300176FCC /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		AEB214C629A7BEEE00176FCC /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,11 @@
 			isa = PBXGroup;
 			children = (
 				AEA0EB48299D4C8500496B90 /* WeatherTrackerApp.swift */,
-				AEA0EB4A299D4C8500496B90 /* ContentView.swift */,
+				AEA0EB56299D4C9100496B90 /* Views */,
+				AEA0EB58299D4C9F00496B90 /* ViewModels */,
+				AEA0EB57299D4C9800496B90 /* Models */,
+				AEA0EB59299D4CA800496B90 /* Utilities */,
+				AEA0EB5C299D587000496B90 /* Data */,
 				AEA0EB4C299D4C8700496B90 /* Assets.xcassets */,
 				AEA0EB4E299D4C8700496B90 /* Preview Content */,
 			);
@@ -65,6 +81,48 @@
 				AEA0EB4F299D4C8700496B90 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AEA0EB56299D4C9100496B90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0EB4A299D4C8500496B90 /* HomeView.swift */,
+				AEA0EB5A299D4E0900496B90 /* WeatherView.swift */,
+				AE4DA636299E8A7100B395AB /* ForecastView.swift */,
+				AE4DA638299E904A00B395AB /* SmallWeatherBox.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AEA0EB57299D4C9800496B90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AEA0EB58299D4C9F00496B90 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AEB214C429A7BED300176FCC /* WeatherModel.swift */,
+				AEB214C629A7BEEE00176FCC /* WeatherAPIClient.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AEA0EB59299D4CA800496B90 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AEA0EB5C299D587000496B90 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0EB5D299D58AF00496B90 /* data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEA0EB50299D4C8700496B90 /* Preview Assets.xcassets in Resources */,
+				AEA0EB5E299D58AF00496B90 /* data.json in Resources */,
 				AEA0EB4D299D4C8700496B90 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEA0EB4B299D4C8500496B90 /* ContentView.swift in Sources */,
+				AEA0EB5B299D4E0900496B90 /* WeatherView.swift in Sources */,
+				AEA0EB4B299D4C8500496B90 /* HomeView.swift in Sources */,
 				AEA0EB49299D4C8500496B90 /* WeatherTrackerApp.swift in Sources */,
+				AE4DA637299E8A7100B395AB /* ForecastView.swift in Sources */,
+				AEB214C529A7BED300176FCC /* WeatherModel.swift in Sources */,
+				AE4DA639299E904A00B395AB /* SmallWeatherBox.swift in Sources */,
+				AEB214C729A7BEEE00176FCC /* WeatherAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +334,7 @@
 				DEVELOPMENT_TEAM = 526WZ46BUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location needed to retrieve weather data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,6 +345,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NSLocationWhenInUseUsageDescription = "\"Location required to retrieve weather information\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshuawright.WeatherTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -299,6 +365,7 @@
 				DEVELOPMENT_TEAM = 526WZ46BUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location needed to retrieve weather data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +376,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NSLocationWhenInUseUsageDescription = "\"Location required to retrieve weather information\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joshuawright.WeatherTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
